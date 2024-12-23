@@ -2,33 +2,7 @@
 <html>
 <head>
     <title>Anes games</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header, footer {
-            background-color: #f1f1f1;
-            padding: 20px;
-        }
-        main {
-            padding: 20px;
-        }
-        a.download-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            color: #fff;
-            background-color: #007BFF;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a.download-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <header>
@@ -36,11 +10,18 @@
     </header>
     <main>
         <h2>Download the Game</h2>
-        <p>Click the button below to download the latest version of my game:</p>
-        <a class="download-button" href="anes.exe" download>Download Now</a>
+        <p>Select your platform and click the button below to download the latest version of my game:</p>
+        <form id="downloadForm">
+            <input type="radio" id="android" name="platform" value="android">
+            <label for="android">Android</label><br>
+            <input type="radio" id="windows" name="platform" value="windows">
+            <label for="windows">Windows</label><br><br>
+            <button type="button" onclick="downloadGame()">Download Now</button>
+        </form>
     </main>
     <footer>
-        <p>© 2024 Anes games. All rights reserved.</p>
+        <p>© 2024 Anes Games. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
